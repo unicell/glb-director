@@ -36,7 +36,7 @@
 #include <bpf/bpf.h>
 #include <bpf/libbpf.h>
 #include <sys/resource.h>
-#include <systemd/sd-daemon.h>
+/*#include <systemd/sd-daemon.h>*/
 
 int main(int argc, char **argv) {
     if (argc != 4) {
@@ -98,7 +98,7 @@ int main(int argc, char **argv) {
         return 1;
     }
 
-    sd_notify(0, "READY=1");
+    /*sd_notify(0, "READY=1");*/
 
     while (1) sleep(1);
 }
